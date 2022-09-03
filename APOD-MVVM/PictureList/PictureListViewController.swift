@@ -8,12 +8,20 @@
 import UIKit
 
 class PictureListViewController: UITableViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView = UITableView(frame: tableView.frame, style: .grouped)
+        tableView.separatorStyle = .none
+        
         view.backgroundColor = .white
         setupNavigationBar()
+        
+        tableView.register(
+            AstronomyPictureCell.self,
+            forCellReuseIdentifier: AstronomyPictureCell.identifier
+        )
     }
     
     private func setupNavigationBar() {
@@ -30,7 +38,34 @@ class PictureListViewController: UITableViewController {
     }
     
     @objc func settingsButtonPressed() {
-        
+        present(SettingsViewController(), animated: true)
     }
+}
+
+// MARK: - TableView Data Source
+
+extension PictureListViewController {
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    override func tableView(_ tableView: UITableView,
+                            numberOfRowsInSection section: Int) -> Int {
+        
+        return 10
+    }
+    
+    override func tableView(_ tableView: UITableView,
+                            cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: AstronomyPictureCell.identifier,
+            for: indexPath
+        ) as? AstronomyPictureCell else { return UITableViewCell() }
+        
+        return cell
+    }
+    
 }
 

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7442DA6828C2646000D3A34F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7442DA6728C2646000D3A34F /* SettingsViewController.swift */; };
+		7442DA6A28C2648E00D3A34F /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7442DA6928C2648E00D3A34F /* SettingsViewModel.swift */; };
+		7442DA6F28C2689500D3A34F /* AstronomyPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7442DA6E28C2689500D3A34F /* AstronomyPicture.swift */; };
+		7442DA7228C26AC200D3A34F /* AstronomyPictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7442DA7128C26AC200D3A34F /* AstronomyPictureCell.swift */; };
+		7442DA7428C26ADB00D3A34F /* AstronomyPictureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7442DA7328C26ADB00D3A34F /* AstronomyPictureViewModel.swift */; };
+		7463CBA328C3686C0055C7BF /* Extension + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7463CBA228C3686C0055C7BF /* Extension + UIView.swift */; };
 		74673BEE28BE741700AD2E81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74673BED28BE741700AD2E81 /* AppDelegate.swift */; };
 		74673BF228BE741700AD2E81 /* PictureListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74673BF128BE741700AD2E81 /* PictureListViewController.swift */; };
 		74673BF728BE741B00AD2E81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74673BF628BE741B00AD2E81 /* Assets.xcassets */; };
@@ -15,6 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7442DA6728C2646000D3A34F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7442DA6928C2648E00D3A34F /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		7442DA6E28C2689500D3A34F /* AstronomyPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPicture.swift; sourceTree = "<group>"; };
+		7442DA7128C26AC200D3A34F /* AstronomyPictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPictureCell.swift; sourceTree = "<group>"; };
+		7442DA7328C26ADB00D3A34F /* AstronomyPictureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPictureViewModel.swift; sourceTree = "<group>"; };
+		7463CBA228C3686C0055C7BF /* Extension + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIView.swift"; sourceTree = "<group>"; };
 		74673BEA28BE741700AD2E81 /* APOD-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "APOD-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74673BED28BE741700AD2E81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74673BF128BE741700AD2E81 /* PictureListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureListViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +47,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7442DA6628C2642500D3A34F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				7442DA6728C2646000D3A34F /* SettingsViewController.swift */,
+				7442DA6928C2648E00D3A34F /* SettingsViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		7442DA6D28C2681F00D3A34F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7442DA6E28C2689500D3A34F /* AstronomyPicture.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7442DA7028C26A8400D3A34F /* PictureCell */ = {
+			isa = PBXGroup;
+			children = (
+				7442DA7128C26AC200D3A34F /* AstronomyPictureCell.swift */,
+				7442DA7328C26ADB00D3A34F /* AstronomyPictureViewModel.swift */,
+			);
+			path = PictureCell;
+			sourceTree = "<group>";
+		};
+		7463CBA128C368220055C7BF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7463CBA228C3686C0055C7BF /* Extension + UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		74673BE128BE741700AD2E81 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +102,9 @@
 			children = (
 				74673BED28BE741700AD2E81 /* AppDelegate.swift */,
 				74D7D87928C0B45100A12BD9 /* PictureList */,
+				7442DA6628C2642500D3A34F /* Settings */,
+				7442DA6D28C2681F00D3A34F /* Models */,
+				7463CBA128C368220055C7BF /* Extensions */,
 				74673BF628BE741B00AD2E81 /* Assets.xcassets */,
 				74673BF828BE741B00AD2E81 /* LaunchScreen.storyboard */,
 				74673BFB28BE741B00AD2E81 /* Info.plist */,
@@ -66,6 +115,7 @@
 		74D7D87928C0B45100A12BD9 /* PictureList */ = {
 			isa = PBXGroup;
 			children = (
+				7442DA7028C26A8400D3A34F /* PictureCell */,
 				74673BF128BE741700AD2E81 /* PictureListViewController.swift */,
 				74D7D87A28C0F80C00A12BD9 /* PictureListViewModel.swift */,
 			);
@@ -142,9 +192,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7442DA6A28C2648E00D3A34F /* SettingsViewModel.swift in Sources */,
+				7442DA7228C26AC200D3A34F /* AstronomyPictureCell.swift in Sources */,
+				7442DA6F28C2689500D3A34F /* AstronomyPicture.swift in Sources */,
 				74D7D87B28C0F80C00A12BD9 /* PictureListViewModel.swift in Sources */,
 				74673BF228BE741700AD2E81 /* PictureListViewController.swift in Sources */,
+				7463CBA328C3686C0055C7BF /* Extension + UIView.swift in Sources */,
 				74673BEE28BE741700AD2E81 /* AppDelegate.swift in Sources */,
+				7442DA7428C26ADB00D3A34F /* AstronomyPictureViewModel.swift in Sources */,
+				7442DA6828C2646000D3A34F /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
