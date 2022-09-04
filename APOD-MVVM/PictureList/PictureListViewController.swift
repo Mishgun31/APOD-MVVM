@@ -9,15 +9,23 @@ import UIKit
 
 class PictureListViewController: UITableViewController {
     
+    private var viewModel: PictureListViewModelProtocol! {
+        didSet {
+            viewModel.getData {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView = UITableView(frame: tableView.frame, style: .grouped)
-        tableView.separatorStyle = .none
+        viewModel = PictureListViewModel()
         
-        view.backgroundColor = .white
         setupNavigationBar()
         
+        tableView = UITableView(frame: tableView.frame, style: .grouped)
+        tableView.separatorStyle = .none
         tableView.register(
             AstronomyPictureCell.self,
             forCellReuseIdentifier: AstronomyPictureCell.identifier
@@ -47,13 +55,13 @@ class PictureListViewController: UITableViewController {
 extension PictureListViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        viewModel.numberOfSections()
     }
     
     override func tableView(_ tableView: UITableView,
                             numberOfRowsInSection section: Int) -> Int {
         
-        return 10
+        viewModel.numberOfRows()
     }
     
     override func tableView(_ tableView: UITableView,
@@ -63,6 +71,8 @@ extension PictureListViewController {
             withIdentifier: AstronomyPictureCell.identifier,
             for: indexPath
         ) as? AstronomyPictureCell else { return UITableViewCell() }
+        
+        cell.viewModel = viewModel.cellViewModel(at: indexPath)
         
         return cell
     }

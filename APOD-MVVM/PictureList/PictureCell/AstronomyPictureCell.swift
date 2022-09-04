@@ -11,6 +11,15 @@ class AstronomyPictureCell: UITableViewCell {
     
     static let identifier = "AstronomyCell"
     
+    var viewModel: AstronomyPictureViewModelProtocol! {
+        didSet {
+            datelabel.text = viewModel.date
+            titleLabel.text = viewModel.title
+            guard let image = UIImage(data: viewModel.imageData) else { return }
+            astronomyImageView.image = image
+        }
+    }
+    
     private let backgroundCellView: UIView = {
         let backgroundCellView = UIView()
         

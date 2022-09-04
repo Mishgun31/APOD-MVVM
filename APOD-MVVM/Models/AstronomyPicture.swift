@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AstronomyPicture {
+struct AstronomyPicture: Decodable {
     
     let title: String?
     let date: String?
