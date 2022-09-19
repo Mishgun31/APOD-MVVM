@@ -11,16 +11,20 @@ class AstronomyPictureCell: UITableViewCell {
     
     static let identifier = "AstronomyCell"
     
-    var viewModel: AstronomyPictureViewModelProtocol! {
+    var viewModel: AstronomyPictureCellViewModelProtocol! {
         didSet {
             datelabel.text = viewModel.date
             titleLabel.text = viewModel.title
-            guard let image = UIImage(data: viewModel.imageData) else { return }
-            astronomyImageView.image = image
+            
+            viewModel.getImageData { imageData in
+                self.astronomyImageView.image = UIImage(data: imageData)
+            }
         }
     }
     
-    private let backgroundCellView: UIView = {
+    // MARK: - Private properties
+    
+    private var backgroundCellView: UIView = {
         let backgroundCellView = UIView()
         
         backgroundCellView.backgroundColor = .secondarySystemGroupedBackground
@@ -35,9 +39,14 @@ class AstronomyPictureCell: UITableViewCell {
         return backgroundCellView
     }()
     
-    private let datelabel = UILabel()
+    private var datelabel: UILabel = {
+        let dateLabel = UILabel()
+        dateLabel.textAlignment = .right
+        
+        return dateLabel
+    }()
     
-    private let astronomyImageView: UIImageView = {
+    private var astronomyImageView: UIImageView = {
         let astronomyImageView = UIImageView()
         
         astronomyImageView.image = UIImage(systemName: "photo")
@@ -46,9 +55,14 @@ class AstronomyPictureCell: UITableViewCell {
         return astronomyImageView
     }()
     
-    private let titleLabel = UILabel()
+    private var titleLabel: UILabel = {
+        let titleLabel = UILabel()
+        titleLabel.textAlignment = .center
+        
+        return titleLabel
+    }()
     
-    private let videoIconImageView: UIImageView = {
+    private var videoIconImageView: UIImageView = {
         let videoIconImageView = UIImageView()
         
         videoIconImageView.image = UIImage(systemName: "play.rectangle")
@@ -56,6 +70,8 @@ class AstronomyPictureCell: UITableViewCell {
         
         return videoIconImageView
     }()
+    
+    // MARK: - Initializers
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -67,6 +83,20 @@ class AstronomyPictureCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - TableView's methods
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        astronomyImageView.image = nil
+        datelabel.text = nil
+        titleLabel.text = nil
+    }
+}
+
+// MARK: - Layout Methods
+
+extension AstronomyPictureCell {
     
     private func setup(subviews: UIView...) {
         contentView.addSubview(backgroundCellView)
@@ -98,20 +128,20 @@ class AstronomyPictureCell: UITableViewCell {
             
             datelabel.topAnchor.constraint(equalTo: backgroundCellView.topAnchor, constant: 8),
             datelabel.leadingAnchor.constraint(equalTo: backgroundCellView.leadingAnchor, constant: 8),
-            datelabel.trailingAnchor.constraint(equalTo: backgroundCellView.trailingAnchor, constant: 8),
+            datelabel.trailingAnchor.constraint(equalTo: backgroundCellView.trailingAnchor, constant: -8),
             
             astronomyImageView.topAnchor.constraint(equalTo: datelabel.bottomAnchor, constant: 8),
             astronomyImageView.leadingAnchor.constraint(equalTo: backgroundCellView.leadingAnchor, constant: 8),
-            astronomyImageView.trailingAnchor.constraint(equalTo: backgroundCellView.trailingAnchor, constant: 8),
+            astronomyImageView.trailingAnchor.constraint(equalTo: backgroundCellView.trailingAnchor, constant: -8),
             astronomyImageView.heightAnchor.constraint(equalToConstant: 200),
             
             titleLabel.topAnchor.constraint(equalTo: astronomyImageView.bottomAnchor, constant: 8),
-            titleLabel.bottomAnchor.constraint(equalTo: backgroundCellView.bottomAnchor, constant: 8),
+            titleLabel.bottomAnchor.constraint(equalTo: backgroundCellView.bottomAnchor, constant: -8),
             titleLabel.leadingAnchor.constraint(equalTo: backgroundCellView.leadingAnchor, constant: 8),
-            titleLabel.trailingAnchor.constraint(equalTo: backgroundCellView.trailingAnchor, constant: 8),
+            titleLabel.trailingAnchor.constraint(equalTo: backgroundCellView.trailingAnchor, constant: -8),
             
             videoIconImageView.topAnchor.constraint(equalTo: backgroundCellView.topAnchor, constant: 8),
-            videoIconImageView.bottomAnchor.constraint(equalTo: astronomyImageView.topAnchor, constant: 8),
+            videoIconImageView.bottomAnchor.constraint(equalTo: astronomyImageView.topAnchor, constant: -8),
             videoIconImageView.leadingAnchor.constraint(equalTo: backgroundCellView.leadingAnchor, constant: 8)
         ])
     }

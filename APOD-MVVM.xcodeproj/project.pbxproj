@@ -11,7 +11,7 @@
 		7442DA6A28C2648E00D3A34F /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7442DA6928C2648E00D3A34F /* SettingsViewModel.swift */; };
 		7442DA6F28C2689500D3A34F /* AstronomyPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7442DA6E28C2689500D3A34F /* AstronomyPicture.swift */; };
 		7442DA7228C26AC200D3A34F /* AstronomyPictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7442DA7128C26AC200D3A34F /* AstronomyPictureCell.swift */; };
-		7442DA7428C26ADB00D3A34F /* AstronomyPictureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7442DA7328C26ADB00D3A34F /* AstronomyPictureViewModel.swift */; };
+		7442DA7428C26ADB00D3A34F /* AstronomyPictureCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7442DA7328C26ADB00D3A34F /* AstronomyPictureCellViewModel.swift */; };
 		745E9CA128C4CCD30002623E /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E9CA028C4CCD30002623E /* Networker.swift */; };
 		7463CBA328C3686C0055C7BF /* Extension + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7463CBA228C3686C0055C7BF /* Extension + UIView.swift */; };
 		74673BEE28BE741700AD2E81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74673BED28BE741700AD2E81 /* AppDelegate.swift */; };
@@ -26,7 +26,7 @@
 		7442DA6928C2648E00D3A34F /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		7442DA6E28C2689500D3A34F /* AstronomyPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPicture.swift; sourceTree = "<group>"; };
 		7442DA7128C26AC200D3A34F /* AstronomyPictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPictureCell.swift; sourceTree = "<group>"; };
-		7442DA7328C26ADB00D3A34F /* AstronomyPictureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPictureViewModel.swift; sourceTree = "<group>"; };
+		7442DA7328C26ADB00D3A34F /* AstronomyPictureCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPictureCellViewModel.swift; sourceTree = "<group>"; };
 		745E9CA028C4CCD30002623E /* Networker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
 		7463CBA228C3686C0055C7BF /* Extension + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIView.swift"; sourceTree = "<group>"; };
 		74673BEA28BE741700AD2E81 /* APOD-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "APOD-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,7 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				7442DA7128C26AC200D3A34F /* AstronomyPictureCell.swift */,
-				7442DA7328C26ADB00D3A34F /* AstronomyPictureViewModel.swift */,
+				7442DA7328C26ADB00D3A34F /* AstronomyPictureCellViewModel.swift */,
 			);
 			path = PictureCell;
 			sourceTree = "<group>";
@@ -211,7 +211,7 @@
 				745E9CA128C4CCD30002623E /* Networker.swift in Sources */,
 				7463CBA328C3686C0055C7BF /* Extension + UIView.swift in Sources */,
 				74673BEE28BE741700AD2E81 /* AppDelegate.swift in Sources */,
-				7442DA7428C26ADB00D3A34F /* AstronomyPictureViewModel.swift in Sources */,
+				7442DA7428C26ADB00D3A34F /* AstronomyPictureCellViewModel.swift in Sources */,
 				7442DA6828C2646000D3A34F /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

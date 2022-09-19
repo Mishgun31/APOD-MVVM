@@ -20,8 +20,6 @@ class PictureListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel = PictureListViewModel()
-        
         setupNavigationBar()
         
         tableView = UITableView(frame: tableView.frame, style: .grouped)
@@ -30,6 +28,8 @@ class PictureListViewController: UITableViewController {
             AstronomyPictureCell.self,
             forCellReuseIdentifier: AstronomyPictureCell.identifier
         )
+        
+        viewModel = PictureListViewModel()
     }
     
     private func setupNavigationBar() {
@@ -54,14 +54,10 @@ class PictureListViewController: UITableViewController {
 
 extension PictureListViewController {
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        viewModel.numberOfSections()
-    }
-    
     override func tableView(_ tableView: UITableView,
                             numberOfRowsInSection section: Int) -> Int {
         
-        viewModel.numberOfRows()
+        return viewModel.numberOfRows()
     }
     
     override func tableView(_ tableView: UITableView,
@@ -76,6 +72,5 @@ extension PictureListViewController {
         
         return cell
     }
-    
 }
 

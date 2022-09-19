@@ -16,6 +16,8 @@ enum RequestType {
     case rangeDatesRequest(startDate: String, endDate: String)
 }
 
+// MARK: - Networker Class
+
 class Networker {
     
     static let shared = Networker()
@@ -51,12 +53,12 @@ class Networker {
     }
     
     func fetchImage(with url: String, completion: @escaping (Data) -> Void) {
-        
+
         guard let url = URL(string: url) else { return }
-        
+
         URLSession.shared.dataTask(with: url) { data, _, _ in
             guard let data = data else { return }
-            
+
             DispatchQueue.main.async {
                 completion(data)
             }

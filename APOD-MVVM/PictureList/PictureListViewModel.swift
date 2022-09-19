@@ -9,49 +9,44 @@ import Foundation
 
 protocol PictureListViewModelProtocol {
     
-    var dailyPicture: AstronomyPicture { get }
+//    var dailyPicture: AstronomyPicture? { get }
     var pictures: [AstronomyPicture] { get }
     
     func getData(completion: @escaping () -> Void )
-    
     func numberOfRows() -> Int
-    func numberOfSections() -> Int
-    func settingsButtonPressed()
+    func cellViewModel(at indexPath: IndexPath) -> AstronomyPictureCellViewModelProtocol
     
-    func cellViewModel(at indexPath: IndexPath) -> AstronomyPictureViewModelProtocol
+    func settingsButtonPressed()
 }
 
 class PictureListViewModel: PictureListViewModelProtocol {
     
-    var dailyPicture: AstronomyPicture = AstronomyPicture(title: nil, date: nil, url: nil, hdurl: nil, medeaType: nil, explanation: nil, thumbnailUrl: nil, copyright: nil)
+//    var dailyPicture: AstronomyPicture?
     var pictures: [AstronomyPicture] = []
     
     func getData(completion: @escaping () -> Void) {
         Networker.shared.fetchData { result in
             switch result {
-            case .success(let AstonomyPictureObject):
-                self.dailyPicture = AstonomyPictureObject as! AstronomyPicture
+            case .success(let astonomyPictureObject):
+                guard let astronomyPicture = astonomyPictureObject as? AstronomyPicture else { return }
+                self.pictures.append(astronomyPicture)
+                completion()
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
-        completion()
     }
     
-    func cellViewModel(at indexPath: IndexPath) -> AstronomyPictureViewModelProtocol {
-        let astronomyPicture = dailyPicture
-        return AstronomyPictureViewModel(astronomyPicture: astronomyPicture)
+    func cellViewModel(at indexPath: IndexPath) -> AstronomyPictureCellViewModelProtocol {
+        let astronomyPicture = pictures[indexPath.row]
+        return AstronomyPictureCellViewModel(astronomyPicture: astronomyPicture)
     }
     
     func numberOfRows() -> Int {
-        return 5
-    }
-    
-    func numberOfSections() -> Int {
-        return 2
+        pictures.count
     }
     
     func settingsButtonPressed() {
-        
+
     }
 }
