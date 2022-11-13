@@ -13,6 +13,7 @@ protocol PictureListViewModelProtocol {
     var pictures: [AstronomyPicture] { get }
     
     func getData(completion: @escaping () -> Void )
+    func numberOfSections() -> Int
     func numberOfRows() -> Int
     func cellViewModel(at indexPath: IndexPath) -> AstronomyPictureCellViewModelProtocol
     
@@ -40,6 +41,10 @@ class PictureListViewModel: PictureListViewModelProtocol {
     func cellViewModel(at indexPath: IndexPath) -> AstronomyPictureCellViewModelProtocol {
         let astronomyPicture = pictures[indexPath.row]
         return AstronomyPictureCellViewModel(astronomyPicture: astronomyPicture)
+    }
+    
+    func numberOfSections() -> Int {
+        2
     }
     
     func numberOfRows() -> Int {

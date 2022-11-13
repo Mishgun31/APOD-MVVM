@@ -24,6 +24,7 @@ class PictureListViewController: UITableViewController {
         
         tableView = UITableView(frame: tableView.frame, style: .grouped)
         tableView.separatorStyle = .none
+        tableView.backgroundColor = .systemBackground
         tableView.register(
             AstronomyPictureCell.self,
             forCellReuseIdentifier: AstronomyPictureCell.identifier
@@ -46,13 +47,20 @@ class PictureListViewController: UITableViewController {
     }
     
     @objc func settingsButtonPressed() {
-        present(SettingsViewController(), animated: true)
+        present(
+            UINavigationController(rootViewController: SettingsViewController()),
+            animated: true
+        )
     }
 }
 
 // MARK: - TableView Data Source
 
 extension PictureListViewController {
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.numberOfSections()
+    }
     
     override func tableView(_ tableView: UITableView,
                             numberOfRowsInSection section: Int) -> Int {
@@ -71,6 +79,15 @@ extension PictureListViewController {
         cell.viewModel = viewModel.cellViewModel(at: indexPath)
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        present(
+//            UINavigationController(rootViewController: DetailedPictureViewController()),
+//            animated: true
+//        )
+//        present(DetailedPictureViewController(), animated: true)
+        show(DetailedPictureViewController(), sender: nil)
     }
 }
 

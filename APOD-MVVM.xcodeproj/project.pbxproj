@@ -7,11 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74282B6F29094D7200E5CC92 /* DetailedPictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74282B6E29094D7200E5CC92 /* DetailedPictureViewController.swift */; };
+		74282B7129094D9600E5CC92 /* DetailedPictureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74282B7029094D9600E5CC92 /* DetailedPictureViewModel.swift */; };
 		7442DA6828C2646000D3A34F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7442DA6728C2646000D3A34F /* SettingsViewController.swift */; };
 		7442DA6A28C2648E00D3A34F /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7442DA6928C2648E00D3A34F /* SettingsViewModel.swift */; };
 		7442DA6F28C2689500D3A34F /* AstronomyPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7442DA6E28C2689500D3A34F /* AstronomyPicture.swift */; };
 		7442DA7228C26AC200D3A34F /* AstronomyPictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7442DA7128C26AC200D3A34F /* AstronomyPictureCell.swift */; };
 		7442DA7428C26ADB00D3A34F /* AstronomyPictureCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7442DA7328C26ADB00D3A34F /* AstronomyPictureCellViewModel.swift */; };
+		7459D978291E8F570012FD10 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7459D977291E8F570012FD10 /* TitleCell.swift */; };
+		7459D97A291E8F790012FD10 /* TitleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7459D979291E8F790012FD10 /* TitleCellViewModel.swift */; };
+		7459D97C292004C30012FD10 /* Extension + UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7459D97B292004C30012FD10 /* Extension + UITableViewCell.swift */; };
+		7459D97E29212EFF0012FD10 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7459D97D29212EFF0012FD10 /* ImageCell.swift */; };
+		7459D98029212F1E0012FD10 /* ImageCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7459D97F29212F1E0012FD10 /* ImageCellViewModel.swift */; };
+		7459D9822921356E0012FD10 /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7459D9812921356E0012FD10 /* DescriptionCell.swift */; };
+		7459D9842921358E0012FD10 /* DescriptionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7459D9832921358E0012FD10 /* DescriptionCellViewModel.swift */; };
 		745E9CA128C4CCD30002623E /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E9CA028C4CCD30002623E /* Networker.swift */; };
 		7463CBA328C3686C0055C7BF /* Extension + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7463CBA228C3686C0055C7BF /* Extension + UIView.swift */; };
 		74673BEE28BE741700AD2E81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74673BED28BE741700AD2E81 /* AppDelegate.swift */; };
@@ -22,11 +31,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		74282B6E29094D7200E5CC92 /* DetailedPictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedPictureViewController.swift; sourceTree = "<group>"; };
+		74282B7029094D9600E5CC92 /* DetailedPictureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedPictureViewModel.swift; sourceTree = "<group>"; };
 		7442DA6728C2646000D3A34F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7442DA6928C2648E00D3A34F /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		7442DA6E28C2689500D3A34F /* AstronomyPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPicture.swift; sourceTree = "<group>"; };
 		7442DA7128C26AC200D3A34F /* AstronomyPictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPictureCell.swift; sourceTree = "<group>"; };
 		7442DA7328C26ADB00D3A34F /* AstronomyPictureCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPictureCellViewModel.swift; sourceTree = "<group>"; };
+		7459D977291E8F570012FD10 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
+		7459D979291E8F790012FD10 /* TitleCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCellViewModel.swift; sourceTree = "<group>"; };
+		7459D97B292004C30012FD10 /* Extension + UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UITableViewCell.swift"; sourceTree = "<group>"; };
+		7459D97D29212EFF0012FD10 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		7459D97F29212F1E0012FD10 /* ImageCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCellViewModel.swift; sourceTree = "<group>"; };
+		7459D9812921356E0012FD10 /* DescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCell.swift; sourceTree = "<group>"; };
+		7459D9832921358E0012FD10 /* DescriptionCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCellViewModel.swift; sourceTree = "<group>"; };
 		745E9CA028C4CCD30002623E /* Networker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
 		7463CBA228C3686C0055C7BF /* Extension + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIView.swift"; sourceTree = "<group>"; };
 		74673BEA28BE741700AD2E81 /* APOD-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "APOD-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +67,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74282B6D29094CD900E5CC92 /* DetailedPicture */ = {
+			isa = PBXGroup;
+			children = (
+				7459D972291E8D800012FD10 /* StaticCells */,
+				74282B6E29094D7200E5CC92 /* DetailedPictureViewController.swift */,
+				74282B7029094D9600E5CC92 /* DetailedPictureViewModel.swift */,
+			);
+			path = DetailedPicture;
+			sourceTree = "<group>";
+		};
 		7442DA6628C2642500D3A34F /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +103,43 @@
 			path = PictureCell;
 			sourceTree = "<group>";
 		};
+		7459D972291E8D800012FD10 /* StaticCells */ = {
+			isa = PBXGroup;
+			children = (
+				7459D9852921364A0012FD10 /* TitleCell */,
+				7459D986292136590012FD10 /* ImageCell */,
+				7459D9872921366A0012FD10 /* DescriptionCell */,
+			);
+			path = StaticCells;
+			sourceTree = "<group>";
+		};
+		7459D9852921364A0012FD10 /* TitleCell */ = {
+			isa = PBXGroup;
+			children = (
+				7459D977291E8F570012FD10 /* TitleCell.swift */,
+				7459D979291E8F790012FD10 /* TitleCellViewModel.swift */,
+			);
+			path = TitleCell;
+			sourceTree = "<group>";
+		};
+		7459D986292136590012FD10 /* ImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				7459D97D29212EFF0012FD10 /* ImageCell.swift */,
+				7459D97F29212F1E0012FD10 /* ImageCellViewModel.swift */,
+			);
+			path = ImageCell;
+			sourceTree = "<group>";
+		};
+		7459D9872921366A0012FD10 /* DescriptionCell */ = {
+			isa = PBXGroup;
+			children = (
+				7459D9812921356E0012FD10 /* DescriptionCell.swift */,
+				7459D9832921358E0012FD10 /* DescriptionCellViewModel.swift */,
+			);
+			path = DescriptionCell;
+			sourceTree = "<group>";
+		};
 		745E9C9F28C4CCAE0002623E /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				7463CBA228C3686C0055C7BF /* Extension + UIView.swift */,
+				7459D97B292004C30012FD10 /* Extension + UITableViewCell.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -112,6 +178,7 @@
 			children = (
 				74673BED28BE741700AD2E81 /* AppDelegate.swift */,
 				74D7D87928C0B45100A12BD9 /* PictureList */,
+				74282B6D29094CD900E5CC92 /* DetailedPicture */,
 				7442DA6628C2642500D3A34F /* Settings */,
 				7442DA6D28C2681F00D3A34F /* Models */,
 				7463CBA128C368220055C7BF /* Extensions */,
@@ -205,13 +272,22 @@
 			files = (
 				7442DA6A28C2648E00D3A34F /* SettingsViewModel.swift in Sources */,
 				7442DA7228C26AC200D3A34F /* AstronomyPictureCell.swift in Sources */,
+				7459D9822921356E0012FD10 /* DescriptionCell.swift in Sources */,
 				7442DA6F28C2689500D3A34F /* AstronomyPicture.swift in Sources */,
 				74D7D87B28C0F80C00A12BD9 /* PictureListViewModel.swift in Sources */,
 				74673BF228BE741700AD2E81 /* PictureListViewController.swift in Sources */,
+				74282B7129094D9600E5CC92 /* DetailedPictureViewModel.swift in Sources */,
+				7459D98029212F1E0012FD10 /* ImageCellViewModel.swift in Sources */,
+				7459D9842921358E0012FD10 /* DescriptionCellViewModel.swift in Sources */,
 				745E9CA128C4CCD30002623E /* Networker.swift in Sources */,
 				7463CBA328C3686C0055C7BF /* Extension + UIView.swift in Sources */,
+				7459D97A291E8F790012FD10 /* TitleCellViewModel.swift in Sources */,
+				7459D97C292004C30012FD10 /* Extension + UITableViewCell.swift in Sources */,
 				74673BEE28BE741700AD2E81 /* AppDelegate.swift in Sources */,
 				7442DA7428C26ADB00D3A34F /* AstronomyPictureCellViewModel.swift in Sources */,
+				74282B6F29094D7200E5CC92 /* DetailedPictureViewController.swift in Sources */,
+				7459D97E29212EFF0012FD10 /* ImageCell.swift in Sources */,
+				7459D978291E8F570012FD10 /* TitleCell.swift in Sources */,
 				7442DA6828C2646000D3A34F /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
