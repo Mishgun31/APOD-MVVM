@@ -16,6 +16,7 @@ protocol PictureListViewModelProtocol {
     func numberOfSections() -> Int
     func numberOfRows() -> Int
     func cellViewModel(at indexPath: IndexPath) -> AstronomyPictureCellViewModelProtocol
+    func viewModelForSelectedRow(at indexPath: IndexPath) -> DetailedPictureViewModelProtocol
     
     func settingsButtonPressed()
 }
@@ -53,5 +54,10 @@ class PictureListViewModel: PictureListViewModelProtocol {
     
     func settingsButtonPressed() {
 
+    }
+    
+    func viewModelForSelectedRow(at indexPath: IndexPath) -> DetailedPictureViewModelProtocol {
+        let astronomyPicture = pictures[indexPath.row]
+        return DetailedPictureViewModel(astronomyPicture: astronomyPicture)
     }
 }

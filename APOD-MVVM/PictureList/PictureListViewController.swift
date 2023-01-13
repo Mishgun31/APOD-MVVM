@@ -11,8 +11,8 @@ class PictureListViewController: UITableViewController {
     
     private var viewModel: PictureListViewModelProtocol! {
         didSet {
-            viewModel.getData {
-                self.tableView.reloadData()
+            viewModel.getData { [weak self] in
+                self?.tableView.reloadData()
             }
         }
     }
@@ -82,12 +82,10 @@ extension PictureListViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        present(
-//            UINavigationController(rootViewController: DetailedPictureViewController()),
-//            animated: true
-//        )
-//        present(DetailedPictureViewController(), animated: true)
-        show(DetailedPictureViewController(), sender: nil)
+        let detailedPictureViewController = DetailedPictureViewController()
+        detailedPictureViewController.viewModel = viewModel.viewModelForSelectedRow(at: indexPath)
+        
+        show(detailedPictureViewController, sender: nil)
     }
 }
 
